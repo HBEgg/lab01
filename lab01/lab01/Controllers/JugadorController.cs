@@ -1,4 +1,6 @@
-﻿using System;
+﻿using lab01.Models;
+using lab01.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,7 @@ namespace lab01.Controllers
         // GET: Jugador
         public ActionResult Index()
         {
-            return View();
+            return View(Storage.Instancia.jugadorLista);
         }
 
         // GET: Jugador/Details/5
@@ -32,9 +34,25 @@ namespace lab01.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                var jugador = new JugadorModel
+                {
+                    Nombre = collection["Nombre"],
+                    Apellido = collection["Apellido"],
+                    Posicion = int.Parse(collection["Posicion"]),
+                    Salario = int.Parse(collection["Salario"]),
+                    Club = collection["Salario"],
 
-                return RedirectToAction("Index");
+
+                };
+
+                if (jugador.Save())
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View(jugador);
+                }
             }
             catch
             {
