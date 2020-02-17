@@ -38,7 +38,7 @@ namespace lab01.Controllers
                 {
                     Nombre = collection["Nombre"],
                     Apellido = collection["Apellido"],
-                    Posicion = int.Parse(collection["Posicion"]),
+                    Posicion = collection["Posicion"],
                     Salario = int.Parse(collection["Salario"]),
                     Club = collection["Salario"],
 

@@ -10,7 +10,7 @@ namespace lab01.Models
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int Posicion { get; set; }
+        public string Posicion { get; set; }
         public int Salario { get; set; }
         public string Club { get; set; }
 
