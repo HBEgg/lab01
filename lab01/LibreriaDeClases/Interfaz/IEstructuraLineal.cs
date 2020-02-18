@@ -11,5 +11,6 @@ namespace LibreriaDeClases.Interfaz
         void Insertar();
         void Eliminar();
         T Get();
+
     }
 }

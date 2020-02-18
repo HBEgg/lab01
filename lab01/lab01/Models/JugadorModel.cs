@@ -1,4 +1,5 @@
 ﻿using lab01.Helpers;
+using LibreriaDeClases.Estructura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace lab01.Models
             }
             catch
             {
+
                 return false;
             }
         }

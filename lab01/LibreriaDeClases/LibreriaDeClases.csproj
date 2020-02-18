@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Estructura\ListaDobleEnlazada.cs" />
     <Compile Include="Estructura\Nodo.cs" />
     <Compile Include="Interfaz\BaseEstructuraLineal.cs" />

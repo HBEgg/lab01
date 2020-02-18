@@ -1,10 +1,12 @@
 ﻿using lab01.Models;
+using LibreriaDeClases.Estructura;
 using lab01.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace lab01.Controllers
 {
@@ -13,6 +15,7 @@ namespace lab01.Controllers
         // GET: Jugador
         public ActionResult Index()
         {
+            
             return View(Storage.Instancia.jugadorLista);
         }
 

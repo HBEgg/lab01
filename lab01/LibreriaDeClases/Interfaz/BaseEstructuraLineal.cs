@@ -11,6 +11,7 @@ namespace LibreriaDeClases.Interfaz
         protected abstract void Insertar(T valor);
         protected abstract void Eliminar();
         protected abstract T Get();
+
     }
 }
 
