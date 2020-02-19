@@ -1,10 +1,11 @@
-﻿@model IEnumerable<lab01.Models.JugadorModel>
+﻿@using lab01.Models
+@model IEnumerable<lab01.Models.JugadorModel>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Jugadores</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -55,3 +56,24 @@
 }
 
 </table>
+<body>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="datafile" />
+        <input type="submit" value="Importar_Archivo" />
+    }
+    @if (Model.Count() > 0)
+    {
+        <hr />
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Posicion</th>
+                <th>Club</th>
+                <th>Salario</th>
+            </tr>
+        </table>
+    }
+
+</body>
