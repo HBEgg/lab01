@@ -73,6 +73,17 @@
                 <th>Club</th>
                 <th>Salario</th>
             </tr>
+            @foreach (JugadorModel jugadores in Model)
+            {
+                <tr>
+                    <td>
+                        @jugadores.Nombre</td>
+                    <td>@jugadores.Apellido</td>
+                    <td>@jugadores.Posicion</td>
+                    <td>@jugadores.Club</td>
+                    <td>@jugadores.Salario</td>
+                </tr>
+            }
         </table>
     }
 
